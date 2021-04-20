@@ -1,7 +1,9 @@
 #+TITLE: Processador 16 bits
 
 * Apresentação
-Este repositório contém o processador monocíclo do livro Logic and Computer Design Fundamentals, de M. Morris Mano e Charles Kime, seu assembler e exemplos de algoritmos desenvolvidos durante a disciplina de Arquitetura e Organização de computadores 2 no CEFET-MG campus Divinópolis. Este processador foi construído utilizando o simulador Digital de Helmut Neemann.[[./Recursos/Digital.png]]
+Este repositório contém o processador monocíclo do livro Logic and Computer Design Fundamentals, de M. Morris Mano e Charles Kime, seu assembler e exemplos de algoritmos desenvolvidos durante a disciplina de Arquitetura e Organização de computadores 2 no CEFET-MG campus Divinópolis. Este processador foi construído utilizando o simulador Digital de Helmut Neemann.
+#+ATTR_ORG: :width 750
+[[./Recursos/Digital.png]]
 
 * Funcionamento
 Nesse processador existem três tipos de instruções: register, imadiate, jump and branch.
@@ -10,7 +12,9 @@ Nesse processador existem três tipos de instruções: register, imadiate, jump 
 | Immediate        | OpCode | DR | SA | OP |
 | Jump  and Branch | OpCode | AL | SA | AR |
 
-Em seguida desenvolva o seu algoritmo utilizando os mnemônicos do livro:[[./Recursos/Mnemônicos.png]]
+Em seguida desenvolva o seu algoritmo utilizando os mnemônicos do livro:
+#+ATTR_ORG: :width 750
+[[./Recursos/Mnemônicos.png]]
 
 * Execução
 1. Para executar o processador, primeiro instale o simulador seguindo as instruções em: https://github.com/hneemann/Digital/
