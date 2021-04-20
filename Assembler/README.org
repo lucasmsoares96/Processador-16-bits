@@ -1,0 +1,34 @@
+#+TITLE: Assembler para o Processador Desenvolvido na Disciplina de Arquitetura e Organização de Computadores 2
+#+AUTHOR: Lucas Martins Soares
+
+
+Para utilizar siga as seguintes etapas:
+
+*** Clone o repositório:
+
+#+begin_src shell
+git clone https://github.com/lucasmsoares96/AOC-2_Assembler.git
+#+end_src
+
+*** Entre no diretório:
+
+#+begin_src shell
+cd AOC-2_Assembler
+#+end_src
+
+*** Compile o código:
+
+#+begin_src shell
+gcc *.c -o assembler
+#+end_src
+
+*** Insira o código em assembly no arquivo `assembly.txt`
+
+*** Execute o assembler:
+
+#+begin_src shell
+./assembler
+#+end_src
+
+***** Será criado um arquivo de saída com o nome `hex.hex` que pode ser importado nos emuladores
+(O assembler precisa do arquivo de mnemônicos no mesmo diretório para funcionar com o nome de `mne.txt`)

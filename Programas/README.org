@@ -1,0 +1,114 @@
+#+TITLE: Assembly
+#+STARTUP: latexpreview
+#+OPTIONS: tex:t
+#+OPTIONS: tex:dvisvgm
+
+* Introdução
+Foi solicitado aos alunos que desenvolvessem dois algoritmos, em assembly do processador desenvolvido em sala de aula, para realizar operações de multiplicação e exponenciação. Foi realizado a multiplicação de $5\cdot3$, e a exponenciação de $5^3$. Como o processador não possui a operação de multiplicação nem exponenciação, precisamos encontrar os resultados através de somas sucessivas.
+* Multiplicação
+A multiplicação foi realizada somando $5+5$ por 3 vezes.
+
+** Assembly:
+
+| Questão 1 | Multiplicação |   |   |   |    |
+|-----------+---------------+---+---+---+----+
+|         0 | LDI           | 0 | 0 | 5 |    |
+|         1 | LDI           | 1 | 0 | 3 |    |
+|         2 | MOVA          | 2 | 0 | 0 |    |
+|         3 | LDI           | 4 | 0 | 1 |    |
+|         4 | ADD           | 2 | 0 | 2 | <- |
+|         5 | INC           | 4 | 4 | 0 |    |
+|         6 | SUB           | 5 | 4 | 1 |    |
+|         7 | BRN           | 7 | 5 | 5 | -> |
+|         8 | ST            | 0 | 6 | 2 |    |
+
+
+| Função   | Registrador |
+|----------+-------------|
+| n1       |           0 |
+| n1       |           1 |
+| result   |           2 |
+| CONTADOR |           4 |
+| IF       |           5 |
+| SAÍDA    |           6 |
+
+** Resultado:
+
+O resultado da operação $(15)$ foi armazenado na endereço $0$ da memória
+
+** Hexadecimal:
+
+#+begin_src
+v2.0 raw
+9805
+9843
+0080
+9901
+0482
+0320
+0b61
+c3ed
+4032
+#+end_src
+
+* Exponenciação
+A exponenciação foi realizada somando o número inicial por ele mesmo pela quantidade de vezes que ele representa $(5+5+5+5+5)$, armazenado o resultado parcial $(25)$ e repetir o processo $(25+25+25+25+25)$.
+
+** Assembly:
+
+| Questão2 | Exponenciação |   |   |   |     |
+|----------+---------------+---+---+---+-----+
+|        0 | LDI           | 0 | 0 | 5 |     |
+|        1 | MOVA          | 2 | 0 | 0 |     |
+|        2 | MOVA          | 6 | 0 | 0 |     |
+|        3 | LDI           | 1 | 0 | 3 |     |
+|        4 | LDI           | 5 | 0 | 1 |     |
+|        5 | LDI           | 3 | 0 | 1 | <-- |
+|        6 | ADD           | 2 | 6 | 2 | <-  |
+|        7 | INC           | 3 | 3 | 0 |     |
+|        8 | SUB           | 4 | 3 | 0 |     |
+|        9 | BRN           | 6 | 4 | 7 | ->  |
+|       10 | MOVA          | 6 | 2 | 0 |     |
+|       11 | INC           | 5 | 5 | 0 |     |
+|       12 | SUB           | 4 | 5 | 1 |     |
+|       13 | BRN           | 5 | 4 | 2 | --> |
+|       14 | ST            | 0 | 7 | 2 |     |
+
+
+
+| Função        | Registrador |
+|---------------+-------------|
+| n1            |           0 |
+| n2            |           1 |
+| result        |           2 |
+| Cmult         |           3 |
+| IF            |           4 |
+| Cexp          |           5 |
+| parcial       |           6 |
+| saída         |           7 |
+
+
+** Resultado:
+
+O resultado da operação $(125)$ foi armazenado na endereço $0$ da memória
+
+** Hexadecimal:
+
+#+begin_src
+v2.0 raw
+9805
+0080
+0180
+9843
+9941
+98c1
+04b2
+02d8
+0b18
+c3e5
+0190
+0368
+0b29
+c3e0
+403a
+#+end_src
