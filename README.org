@@ -1,12 +1,13 @@
 #+TITLE: Processador 16 bits
 
 * Apresentação
-Este repositório contém o processador monocíclo do livro Logic and Computer Design Fundamentals, de M. Morris Mano e Charles Kime, seu assembler e exemplos de algoritmos desenvolvidos durante a disciplina de Arquitetura e Organização de computadores 2 no CEFET-MG campus Divinópolis. Este processador foi construído utilizando o simulador Digital de Helmut Neemann.
+Este repositório contém o processador monocíclo do livro Logic and Computer Design Fundamentals, de M. Morris Mano e Charles Kime, seu assembler e exemplos de algoritmos desenvolvidos durante a disciplina de Arquitetura e Organização de computadores 2 no CEFET-MG campus Divinópolis. Este processador foi construído utilizando o simulador Digital de Helmut Neemann.[[./Recursos/Digital.png]]
 
-[[./Recursos/Digital.png]]
+* Funcionamento
+Nesse processador existem três tipos de instruções: register, imadiate, jump and branch.[[./Recursos/formatosDeInstrução.png]]
+Em seguida desenvolva o seu algoritmo utilizando os mnemônicos do livro:[[./Recursos/Mnemônicos.png]]
+
 * Execução
-Para executar o processador, primeiro instale o simulador seguindo as instruções em: https://github.com/hneemann/Digital/
-Em seguida desenvolva o seu algoritmo utilizando os mnemônicos do livro:
-[[./Recursos/Mnemônicos.png]]
-Em seguida execute o insira o código no arquivo assembly.txt dentro da pasta Assembler e o execute (instruções na pasta)
-Na pasta Programas se encontram exemplos de código em linguagem de maquina no formato .hex e a planilha utilizada no seu desenvolvimento.
+1. Para executar o processador, primeiro instale o simulador seguindo as instruções em: https://github.com/hneemann/Digital/
+2. Em seguida execute o insira o código no arquivo assembly.txt dentro da pasta Assembler e o execute (instruções na pasta)
+3. Na pasta Programas se encontram exemplos de código em linguagem de maquina no formato .hex e a planilha utilizada no seu desenvolvimento.
