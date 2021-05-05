@@ -1,7 +1,8 @@
 #+TITLE: Processador 16 bits
 
 * Apresentação
-Este repositório contém o processador monocíclo do livro Logic and Computer Design Fundamentals, de M. Morris Mano e Charles Kime, seu assembler e exemplos de algoritmos desenvolvidos durante a disciplina de Arquitetura e Organização de computadores 2 no CEFET-MG campus Divinópolis. Este processador foi construído utilizando o simulador Digital de Helmut Neemann.
+Este repositório apresenta um processador monocíclo desenvolvido a partir do conteúdo apresentado nos capítulos 9 e 10 na 4a edição internacional do livro Logic and Computer Design Fundamentals, M. Morris Mano e Charles Kime, com uma linguagem assembly própria, similar ao MIPS em proporção reduzida para fins didáticos. O desenvolvimento foi iniciado na disciplina de Laboratório de Arquitetura e Organização de Computadores I e concluída durante a disciplina de Arquitetura e Organização de computadores II no CEFET-MG Campus V – Divinópolis. Para fins de avaliação de funcionamento estão disponibilizados implementações de algoritmos, desenvolvidos para esta plataforma. Todo o processador foi implementado sobre o simulador Digital de Helmut Neemann. Para facilitar a tradução de programas mnemônicos para códigos hexadecimais, um compilador foi desenvolvido em linguagem C e também está apresentado.
+
 #+ATTR_ORG: :width 750
 [[./Recursos/Digital.png]]
 
